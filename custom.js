@@ -1,3 +1,15 @@
 $(document).ready(function(){
-	$("input:submit").button();
+	$("#selectables div").draggable({
+		revert: "invalid",
+		helper: "clone", 
+		opacity: 0.5,
+		connectToSortable: "#finalForm"
+	});
+
+	$("#finalForm").sortable({
+		revert: true,
+		change: function(event, ui){
+			$("#firstElement").hide("slow");	
+		}
+	});
 });

@@ -1,0 +1,30 @@
+body{
+	width: 960px;
+}
+
+h1{
+	font-family: Arial, sans-serif;
+}
+
+#finalForm{
+	float: left;
+	width: 860px;
+}
+
+#finalForm div{
+	padding-left: 10px;
+}
+
+#selectables{
+	float: right;
+	width: 90px;
+	
+}
+
+#selectables div{
+	text-align: center;
+}
+
+#hiddenForm{
+	visibility: hidden;
+}

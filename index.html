@@ -2,18 +2,26 @@
 <head>
 	<title>Formular Generator</title>
 	<link type="text/css" rel="stylesheet" href="lib/jquery-ui/css/ui-darkness/jquery-ui-1.8.16.custom.css" />
+	<link type="text/css" rel="stylesheet" href="style.css" />
 	<script type="text/javascript" src="lib/jquery-ui/js/jquery-1.6.2.min.js"></script>
 	<script type="text/javascript" src="lib/jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
 	<script type="text/javascript" src="custom.js"></script>
 </head>
 <body>
-	<form action="#" id="addForm">
-		<select>
-			<option id="selectInput">Input</option>
-			<option id="selectRadio">Radio Box</option>
-		</select>
-		<br />
-		<input type="submit"  value="Hinzuf&uuml;gen />
-	</form>
+	<h1>Formular Generator</h1>
+	<div id="finalForm">
+		<div id="firstElement" class="ui-widget-header"><p>Drop here!</p></div>
+	</div>
+	<div id="selectables">
+		<div id="input" class="ui-widget-header">
+			<p>Input</p>
+		</div>
+		<div id="select" class="ui-widget-header">
+			<p>Select</p>
+		</div>
+		<div id="radio" class="ui-widget-header">
+			<p>Radio</p>
+		</div>
+	</div>
 </body>
 </html>
