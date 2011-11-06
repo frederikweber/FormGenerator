@@ -1,15 +1,49 @@
 $(document).ready(function(){
-	$("#selectables div").draggable({
-		revert: "invalid",
-		helper: "clone", 
-		opacity: 0.5,
-		connectToSortable: "#finalForm"
+	$("#newElementButton").button().click(function(){
+		$("#modalForm").dialog("open");
 	});
-
-	$("#finalForm").sortable({
-		revert: true,
-		change: function(event, ui){
-			$("#firstElement").hide("slow");	
+	
+	$("#accord").accordion({
+		autoHeight: false
+	});
+	
+	$("#modalForm").dialog({
+		autoOpen: false,
+		buttons: {
+			"Add": function(){
+				addElement();
+			}
+		},
+		modal: true,
+		width: 600
+	});
+	
+	$("#addOptionButton").button().click(function(){
+		var input = $("#formSelectAdd");
+		$("#finalSelectForm").append("<option>" + input.val() + "</option>");
+		input.val("");
+	});
+	
+	function addElement(){
+		var active = $("#accord").accordion("option", "active");
+		var row = $("<tr />");
+		//Input
+		if(active == 0){
+			row.append("<td>Input</td>");
+			row.append("<td>" + $("#formInputName").val() + "</td>");
+			row.append("<td>" + $("#formInputValue").val() + "</td>");
+		} else if(active == 1){
+			row.append("<td>Select</td>");
+			row.append("<td>" + $("#formSelectName").val() + "</td>");
+			var text = "";
+			$("#finalSelectForm option").each(function(){
+				text = text + "<span>" + $(this).text() + "</span><br />";
+			});
+			row.append("<td>" + text + "</td>");
 		}
-	});
+		$("#finalForm table").append(row);
+		$("#modalForm").dialog("close");
+		$("#modalForm input").val("");
+		$("#finalSelectForm").empty();
+	}
 });

@@ -1,8 +1,5 @@
 body{
 	width: 960px;
-}
-
-h1{
 	font-family: Arial, sans-serif;
 }
 
@@ -11,20 +8,21 @@ h1{
 	width: 860px;
 }
 
-#finalForm div{
-	padding-left: 10px;
-}
-
-#selectables{
+#sidebar{
 	float: right;
-	width: 90px;
-	
+	width: 100px;
 }
 
-#selectables div{
-	text-align: center;
+th{
+	background-color: #F58400;
 }
 
-#hiddenForm{
-	visibility: hidden;
+td{
+	background-color: #000000;
+}
+
+th, td{
+	color: #FFFFFF;
+	width: 60px;
+	height: 20px;
 }

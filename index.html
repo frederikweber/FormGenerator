@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Formular Generator</title>
 	<link type="text/css" rel="stylesheet" href="lib/jquery-ui/css/ui-darkness/jquery-ui-1.8.16.custom.css" />
@@ -10,19 +12,49 @@
 <body>
 	<h1>Formular Generator</h1>
 	<div id="finalForm">
-		<div id="firstElement" class="ui-widget-header"><p>Drop here!</p></div>
+		<table>
+			<tr>
+				<th>Typ</th>
+				<th>Name</th>
+				<th>Wert</th>
+			</tr>
+		</table>
 	</div>
-	<div id="selectables">
-		<div id="input" class="ui-widget-header">
-			<p>Input</p>
-		</div>
-		<div id="select" class="ui-widget-header">
-			<p>Select</p>
-		</div>
-		<div id="radio" class="ui-widget-header">
-			<p>Radio</p>
+	<div id="sidebar">
+		<a href="#" id="newElementButton">Neues Element</a>
+	</div>
+	<div id="modalForm" title="Neues Element">
+		<div id="accord">
+			<h3><a href="#">Input</a></h3>
+			<div>
+				<form>
+					<label for="formInputName">Name</label>
+					<input type="text" id="formInputName" />
+					<br />
+					<label for="formInputValue">Default Value</label>
+					<input type="text" id="formInputValue" />
+				</form>
+			</div>
+			<h3><a href="#">Select</a></h3>
+			<div>
+				<form>
+					<label for="formSelectName">Name</label>
+					<input type="text" id="formSelectName" />
+					<br />
+					<input type="text" id="formSelectAdd" />
+					<p id="addOptionButton">Add Option</p>
+				</form>
+				<h4>Preview</h4>
+				<form>
+					<select id="finalSelectForm">
+					</select>
+				</form>
+			</div>
+			<h3><a href="#">Radio</a></h3>
+			<div>
+				<p>Test</p>
+			</div>
 		</div>
 	</div>
-	<div id="hiddenForm" />
 </body>
 </html>
