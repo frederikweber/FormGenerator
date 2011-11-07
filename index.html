@@ -13,15 +13,19 @@
 	<h1>Formular Generator</h1>
 	<div id="finalForm">
 		<table>
-			<tr>
-				<th>Typ</th>
-				<th>Name</th>
-				<th>Wert</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Typ</th>
+					<th>Name</th>
+					<th>Wert</th>
+				</tr>
+			</thead>
+			<tbody />
 		</table>
 	</div>
 	<div id="sidebar">
-		<a href="#" id="newElementButton">Neues Element</a>
+		<p id="newElementButton">New Element</p>
+		<p id="generateHtmlButton">Generate HTML</p>
 	</div>
 	<div id="modalForm" title="Neues Element">
 		<div id="accord">
@@ -52,9 +56,21 @@
 			</div>
 			<h3><a href="#">Radio</a></h3>
 			<div>
-				<p>Test</p>
+				<form>
+					<label for="formRadioName">Name</label>
+					<input type="text" id="formRadioName" />
+					<br />
+					<input type="text" id="formRadioAdd" />
+					<p id="addRadioButton">Add Radio</p>
+				</form>
+				<h4>Preview</h4>
+				<form id="finalRadioForm">
+				</form>
 			</div>
 		</div>
+	</div>
+	<div id="genHtmlModal" title="Generate HTML">
+		<textarea id="htmlOutput" cols="68" rows="15"></textarea>
 	</div>
 </body>
 </html>
