@@ -24,7 +24,7 @@ $(document).ready(function(){
 		autoOpen: false,
 		buttons: {
 			"Close": function(){
-				$("genHtmlModal").dialog("close");
+				$("#genHtmlModal").dialog("close");
 			}
 		},
 		modal: true,
