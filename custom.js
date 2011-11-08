@@ -78,6 +78,13 @@ $(document).ready(function(){
 			});
 			row.append("<td>" + text + "</td>");
 		}
+		var span = $('<td><span class="ui-icon ui-icon-trash" /></td>');
+		span.find("span").click(function(){
+			row.hide("fast", function(){
+				row.remove();
+			});
+		});
+		row.append(span);
 		$("#finalForm table").append(row);
 		$("#modalForm").dialog("close");
 		$("#modalForm input").val("");

@@ -1,16 +1,43 @@
 body{
 	width: 960px;
 	font-family: Arial, sans-serif;
+	background-color: #0078A3;
+	margin: auto;
+}
+
+#main{
+	width: 800px;
+	border-radius: 10px;
 }
 
 #finalForm{
 	float: left;
-	width: 860px;
+	background-color: #DFDFDF;
+	width: 660px;
+	height: 300px;
 }
 
 #sidebar{
 	float: right;
-	width: 100px;
+	width: 140px;
+	height: 300px;
+	background-color: #DFDFDF;
+}
+
+#header{
+	background-color: #3F3F3F;
+	height: 100px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#footer{
+	clear: both;
+	height: 50px;
+	background-color: #3F3F3F;
+	color: #FFFFFF;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 th{
@@ -25,4 +52,29 @@ th, td{
 	color: #FFFFFF;
 	width: 60px;
 	height: 20px;
+}
+
+#sidebar p{
+	width: 110px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+#footer span{
+	position: relative;
+	top: 16px;
+	left: 20px;
+}
+
+#header h1{
+	color: #FFFFFF;
+	position: relative;
+	top: 30px;
+	left: 20px;
+}
+
+#finalForm table{
+	position: relative;
+	top: 20px;
+	left: 20px;
 }
