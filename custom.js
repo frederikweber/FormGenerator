@@ -23,8 +23,8 @@ $(document).ready(function(){
 	$("#genHtmlModal").dialog({
 		autoOpen: false,
 		buttons: {
-			"Download": function(){
-				
+			"Close": function(){
+				$("genHtmlModal").dialog("close");
 			}
 		},
 		modal: true,
@@ -49,7 +49,9 @@ $(document).ready(function(){
 	});
 	
 	$("#generateHtmlButton").button().click(function(){
-		$("#htmlOutput").val(getHtmlFromTable().html());
+		var htmlOutput = getHtmlFromTable().html();
+		$("#htmlOutput").val(htmlOutput);
+		$("#genHtmlModal a").button().attr("href", "createdownload.php?text=" + htmlOutput);
 		$("#genHtmlModal").dialog("open");
 	});
 	
